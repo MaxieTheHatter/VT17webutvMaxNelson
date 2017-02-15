@@ -1,0 +1,145 @@
+ul li{
+	list-style: none;
+}
+button{
+	background-color: green;
+	border-radius: 5px;
+	border: none;
+	padding: 10px;
+	display: inline-block;
+	margin: 30px;
+	margin-top: 100px;
+	width: 100px;
+	-webkit-animation: resize 2s infinite linear alternate, rotate 2s infinite linear, changeColor 2s infinite linear;
+}
+
+li:nth-child(2) button{
+	-webkit-animation: slidein 3s infinite alternate, bounce 3s infinite linear alternate;
+	
+}
+
+li:nth-child(3) button{
+	-webkit-animation: rotate 5s infinite linear, changeColor 5s infinite linear;
+}
+
+li:nth-child(4) button{
+	-webkit-animation: resize 1s infinite linear alternate, rotate 1s infinite linear, changeColor 1s infinite linear reverse;
+}
+
+li:nth-child(5) button{
+	-webkit-animation: resize 2s infinite linear alternate-reverse, rotate 2s infinite linear alternate, changeColor 2s infinite linear;
+}
+
+@keyframes resize {
+	0%{
+		top: -50px;
+		size: 1em;
+		width: 100px;
+		height: 70px;
+		transform: rotate(0deg);
+	}
+	12% {
+		top: 12px; 
+		size: 1.1em;
+		width: 112px;
+		height: 75px;
+		transform: rotate(45deg);
+	}
+	
+	25%{
+		top: 25px; 
+		size: 1.2em;
+		width: 125px;
+		height: 80px;
+		transform: rotate(90deg);
+	}
+		
+	50% {
+		top: 50px; 
+		size: 1.4em;
+		width: 150px;
+		height: 100px;
+		transform: rotate(180deg);
+	}
+	75% {
+		top: 75px;
+		size: 1.6em;
+		width: 175px;
+		height: 120px;
+		transform: rotate(270deg);
+	}
+	
+	100%{
+		top: 100px;
+		width: 200px;
+		height: 140px;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes changeColor {
+	0%{
+		background: green;
+		color: white;
+	}
+	
+	12%{
+		background: blue; 
+		color: yellow; 
+	}
+	
+	25%{
+		
+	}
+	
+	37%{
+		background: red; 
+		color: green; 
+	}
+	
+	50%{
+		background: yellow; 
+		color: blue; 
+	}
+	
+	62%{
+		background: red; 
+		color: green;
+	}
+	
+	75% {
+		
+	}
+	
+	87%{
+		background: blue; 
+		color: yellow; 
+	}
+	
+	100%{
+		background: green;
+		color: white;
+	}
+}
+
+@keyframes rotate {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+@keyframes bounce {
+	from {transform: translateY(-50%);}
+	to {transform: translateY(0);}
+	
+}
+
+@keyframes slidein {
+	from {
+		margin-left: 120%; 
+		width: 100px;}
+	
+	to {
+		margin-left: 0;
+		width: 300px;
+	}
+}

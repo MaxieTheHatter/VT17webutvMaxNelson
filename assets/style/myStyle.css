@@ -58,7 +58,7 @@ aside ul{
 	width: 250px;
 	background-color: #f1f1f1;
 	height: 100%:;
-	position: fixed;
+	position: absolute;
 	overflow: auto;
 	border-radius: 0;
 }
