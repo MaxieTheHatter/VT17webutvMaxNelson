@@ -1,0 +1,100 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+header, aside, main, footer{
+	border-radius: 5px;
+	position: absolute;
+}
+
+header {
+	background-color: blue;
+	position: relative;
+	font-family: sans-serif;
+	color: white;
+	padding-left: 245px;
+	height: 70px;
+	width: 1015px;
+}
+
+main{
+	margin-top: 10px;
+	margin-left: 235px;
+	height: 985px;
+	background-color: hotpink;
+	width: 1010px;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+
+main p{
+	width: 750px;
+	text-align: justify;
+	padding-top: 5px;
+}
+main p::first-letter {
+	font-size: 1.5em;
+}
+
+aside {
+	margin-top: 80px;
+	background-color: green;
+	width: 250px;
+	height: 1000px;
+	float: right;
+}
+
+aside img{
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+aside ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 250px;
+	background-color: #f1f1f1;
+	height: 100%:;
+	position: fixed;
+	overflow: auto;
+	border-radius: 0;
+}
+
+.NavBar li a, .JS_NAV li a {
+	display: block;
+	color: #000;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+.NavBar li a.active, .JS_NAV li a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.NavBar li a:hover:not(.active), .JS_NAV li a:hover:not(.active) {
+	background-color: #555;
+	color: white;
+}
+
+.JS_NAV{
+	margin-top: 125%;
+}
+
+.JS_NAV h2{
+	position: relative;
+}
+
+footer {
+	background-color: gray;
+	margin-top: 1020px;
+	width: 1260px;
+	position: relative;
+}
+
+footer a:visited, footer a:link{
+	color: #7FFF00;
+}
