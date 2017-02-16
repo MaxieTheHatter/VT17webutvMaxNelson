@@ -22,7 +22,7 @@ li:nth-child(2) button{
 }
 
 li:nth-child(3) button{
-	-webkit-animation: rotate 4s infinite linear, changeColor 4s infinite ease-in-out, rotateX 3s infinite linear;
+	-webkit-animation: rotate 4s infinite linear, changeColor 4s infinite ease-in-out, rotateX 3s infinite linear, moveAround 4s infinite linear;
 }
 
 li:nth-child(4) button{
@@ -188,4 +188,49 @@ li:nth-child(8) button{
 	0%{border-radius: 0px;}
 	50%{border-radius: 300px;}
 	100%{border-radius: 0px;}
+}
+
+@keyframes moveAround {
+	0% {
+		position: absolute;
+		left: 0;
+		top: 80%;
+		width: 10%;
+		height: 10%;
+	}
+	16% {
+		position: absolute;
+		bottom: 0;
+		left: 80%;
+		width: 10%;
+		height: 10%;
+	}
+	33% {
+		position: absolute;
+		top: 0;
+		right: 80%;
+		width: 10%;
+		height: 10%;
+	}
+	50% {
+		position: absolute;
+		top: 0;
+		left: 80%;
+		width: 10%;
+		height: 10%;
+	}
+	66% {
+		position: absolute;
+		bottom: 0;
+		right: 80%;
+		width: 10%;
+		height: 10%;
+	}
+	100% {
+		position: absolute;
+		left: 0;
+		top: 80%;
+		width: 10%;
+		height: 10%;
+	}
 }
