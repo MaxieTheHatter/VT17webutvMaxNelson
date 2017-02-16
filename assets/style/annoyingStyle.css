@@ -10,70 +10,74 @@ button{
 	margin: 30px;
 	margin-top: 100px;
 	width: 100px;
-	-webkit-animation: resize 2s infinite linear alternate, rotate 2s infinite linear, changeColor 2s infinite linear;
+	font-size: 16px;
+	}
+
+li:nth-child(1) button{
+	-webkit-animation: resize 2s 250 linear alternate, changeColor 2s infinite ease-in-out;
 }
 
 li:nth-child(2) button{
-	-webkit-animation: slidein 3s infinite alternate, bounce 3s infinite linear alternate;
-	
+	-webkit-animation: slidein 3s infinite linear, changeColor 1s infinite linear alternate, resize 2s infinite linear alternate, rotateX 2s infinite linear;
 }
 
 li:nth-child(3) button{
-	-webkit-animation: rotate 5s infinite linear, changeColor 5s infinite linear;
+	-webkit-animation: rotate 4s infinite linear, changeColor 4s infinite ease-in-out, rotateX 3s infinite linear;
 }
 
 li:nth-child(4) button{
-	-webkit-animation: resize 1s infinite linear alternate, rotate 1s infinite linear, changeColor 1s infinite linear reverse;
+	-webkit-animation: resize 1s 10 linear alternate-reverse, rotate 1s infinite linear, changeColor 1s infinite linear reverse, changeBorder 1s 40 linear;
 }
 
 li:nth-child(5) button{
-	-webkit-animation: resize 2s infinite linear alternate-reverse, rotate 2s infinite linear alternate, changeColor 2s infinite linear;
+	-webkit-animation: changeFont 5s infinite ease alternate-reverse, rotate 1s infinite linear alternate, changeColor 2s infinite linear;
+}
+
+li:nth-child(6) button{
+	-webkit-animation: slidein 2s 10 alternate-reverse, rotate 2s infinite linear;
+}
+
+li:nth-child(7) button{
+	-webkit-animation: resize 1.5s infinite ease alternate-reverse, rotateY 1s infinite ease-in;
+}
+
+li:nth-child(8) button{
+	-webkit-animation: changeFont 2s infinite linear alternate, changeColor 0.5s infinite linear alternate;
 }
 
 @keyframes resize {
 	0%{
-		top: -50px;
-		size: 1em;
-		width: 100px;
-		height: 70px;
-		transform: rotate(0deg);
+		width: 200px;
+		height: 100px;
+		padding: 0;
 	}
 	12% {
-		top: 12px; 
-		size: 1.1em;
-		width: 112px;
-		height: 75px;
-		transform: rotate(45deg);
+		width: 248px;
+		height: 124px;
+		padding: 50px;
 	}
 	
 	25%{
-		top: 25px; 
-		size: 1.2em;
-		width: 125px;
-		height: 80px;
-		transform: rotate(90deg);
+		width: 296px;
+		height: 148px;
+		padding: 100px;
 	}
 		
-	50% {
-		top: 50px; 
-		size: 1.4em;
-		width: 150px;
-		height: 100px;
-		transform: rotate(180deg);
+	50% { 
+		width: 344px;
+		height: 172px;
+		padding: 150px;
 	}
 	75% {
-		top: 75px;
-		size: 1.6em;
-		width: 175px;
-		height: 120px;
-		transform: rotate(270deg);
+		width: 392px;
+		height: 196px;
+		padding: 200px;
 	}
 	
 	100%{
-		top: 100px;
-		width: 200px;
-		height: 140px;
-		transform: rotate(360deg);
+		width: 440px;
+		height: 220px;
+		padding: 250px;
 	}
 }
 
@@ -83,13 +87,9 @@ li:nth-child(5) button{
 		color: white;
 	}
 	
-	12%{
-		background: blue; 
-		color: yellow; 
-	}
-	
 	25%{
-		
+		background: blue; 
+		color: yellow;
 	}
 	
 	37%{
@@ -108,10 +108,6 @@ li:nth-child(5) button{
 	}
 	
 	75% {
-		
-	}
-	
-	87%{
 		background: blue; 
 		color: yellow; 
 	}
@@ -127,19 +123,69 @@ li:nth-child(5) button{
 	to {transform: rotate(360deg);}
 }
 
-@keyframes bounce {
-	from {transform: translateY(-50%);}
-	to {transform: translateY(0);}
-	
+@keyframes rotateX {
+	from {transform: rotateX(0deg);}
+	to {transform: rotateX(360deg);}
+}
+
+@keyframes rotateY {
+	from {transform: rotateY(0deg);}
+	to {transform: rotateY(360deg);}
 }
 
 @keyframes slidein {
-	from {
-		margin-left: 120%; 
-		width: 100px;}
-	
-	to {
+	0% {
 		margin-left: 0;
 		width: 300px;
 	}
+	
+	33% {
+		margin-left: 120%; 
+		width: 100px;
+	}	
+	50% {
+		margin-left: 0;
+		width: 300px;
+	}
+	66% {
+		margin-left: -120%;
+		width: 100px;
+	}
+	100% {
+		margin-left0;
+		width: 300px;
+	}
+}
+
+@keyframes changeFont {
+	0%{
+		font-size: 1em;
+		font-family: Georgia, serif
+	}
+	
+	25%{
+		font-size: 1.25em;
+		font-family: Impact, Charcoal, sans-serif;
+	}
+	
+	50%{
+		font-size: 1.5em;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+	}
+	
+	75%{
+		font-size: 1.75em;
+		font-family: "Courier New", Courier, monospace;
+	}
+	
+	100%{
+		font-size: 2em;
+		font-family: "Times New Roman", Times, serif;
+	}
+}
+
+@keyframes changeBorder {
+	0%{border-radius: 0px;}
+	50%{border-radius: 300px;}
+	100%{border-radius: 0px;}
 }
