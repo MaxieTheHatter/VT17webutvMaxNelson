@@ -34,7 +34,7 @@ li:nth-child(5) button{
 }
 
 li:nth-child(6) button{
-	-webkit-animation: slidein 2s 10 alternate-reverse, rotate 2s infinite linear;
+	-webkit-animation: slidein 2s 10 alternate-reverse, rotate 2s infinite linear, moveAround 2s infinite linear;
 }
 
 li:nth-child(7) button{
