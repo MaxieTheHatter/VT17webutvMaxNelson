@@ -3,6 +3,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../style/main.css">
+	<link rel="stylesheet" type="text/css" href="../style/validator.css">
+	<script src="../script/validator.js" async></script>
 	<title>Uppgift 3</title>
 </head>
 <body>
@@ -19,6 +21,31 @@
 		</ul>
 	</nav>
 	
-	<p>There doesn't seem to be anything here</p>
+	
+	<article class="container">
+		<h1 class="container__title">Text Valideringar</h1>
+		<form class="validation__form">
+			<hr>
+			<label>Person nummer: </label><br>
+			<input onkeyup="validateID()" type="text" id="idNumber" class="validation__input">
+			<label>
+				Result: <span class="validation__result" id="idNumberResult"></span>
+			</label><br>
+
+			<hr>
+			<label>Skottår: </label><br>
+			<input onkeyup="validateLeapYear()" type="text" id="leapYear" class="validation__input">
+			<label>
+				Result: <span class="validation__result" id="leapYearResult"></span>
+			</label><br>
+			
+			<hr>
+			<label>Siffersumma: </label><br>
+			<input onkeyup="validateNumberSum()" type="number" id="numberSum" class="validation__input">
+			<label>
+				Result: <span class="validation__result" id="numberSumResult"></span>
+			</label>
+		</form>
+	</article>
 </body>
 </html>
