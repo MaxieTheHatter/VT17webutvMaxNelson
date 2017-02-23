@@ -8,6 +8,7 @@ $(document).ready(function(){
             }
         } 
     };
+	var clickCount = 0;
 	var number = "";
     var newnumber = "";
     var operator = "";
@@ -26,6 +27,8 @@ $(document).ready(function(){
 		newnumber = number;
 		number = "";
 		result.text("0");
+		clickCount = 0;
+
     });
     $("#clear,#clearall").click(function(){
 		number = "";
@@ -35,17 +38,22 @@ $(document).ready(function(){
 		}
     });
     $("#equals").click(function(){
+		if(number = "") return;
 		newnumber = parseInt(newnumber, 10);
         number = parseInt(number, 10);
 		
 		if (operator === "+"){
             var answer = newnumber + number; 
+			resultList.append(newnumber.toString() + " + " + number.toString() + "<br>")
 		} else if (operator === "-"){
-            var answer = newnumber - number; 
+            var answer = newnumber - number;
+			resultList.append(newnumber.toString() + " - " + number.toString() + "<br>")			
 		} else if (operator === "/"){
-            var answer = newnumber / number; 
+            var answer = newnumber / number;
+			resultList.append(newnumber.toString() + " / " + number.toString() + "<br>")			
 		} else if (operator === "*"){
-            var answer = newnumber * number;               
+            var answer = newnumber * number;
+			resultList.append(newnumber.toString() + " * " + number.toString() + "<br>")			
 		}
 		
 		answerStr = answer.toString(); 
