@@ -38,7 +38,6 @@ $(document).ready(function(){
 		}
     });
     $("#equals").click(function(){
-		if(number = "") return;
 		newnumber = parseInt(newnumber, 10);
         number = parseInt(number, 10);
 		
