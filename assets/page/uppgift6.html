@@ -3,7 +3,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../style/main.css">
-	<title>Uppgift 3</title>
+	<link rel="stylesheet" type="text/css" href="../style/calculator.css">
+	<script src="../script/jquery-3.1.1.min.js" defer></script>
+	<script src="../script/calculator.js" defer></script>
+	<title>Uppgift 6</title>
 </head>
 <body>
 	<nav>
@@ -19,6 +22,32 @@
 		</ul>
 	</nav>
 	
-	<p>There doesn't seem to be anything here</p>
+	<h1 class="container__title">A Simple Calculator</h1>
+
+	<aside class="resultBlock">
+		<h2 class="resultBlock__title">Results</h2>
+		<ul id="results" class="resultBlock__list"></ul>
+	</aside>
+
+	<div id="calculator" class="calc">
+		<span id="result" class="calc__display">0</span>
+		<span class="calc__number">1</span>
+		<span class="calc__number">2</span>
+		<span class="calc__number">3</span><br>
+		<span class="calc__number">4</span>
+		<span class="calc__number">5</span>
+		<span class="calc__number">6</span><br>
+		<span class="calc__number">7</span>
+		<span class="calc__number">8</span>
+		<span class="calc__number">9</span><br>
+		<span id="clear" class="calc__number">C</span>
+		<span class="calc__number">0</span>
+		<span id="clearall" class="calc__number">AC</span><br>
+		<span class="calc__sign">+</span>
+		<span class="calc__sign">-</span>
+		<span id="equals" class="calc__sign">=</span><br>
+		<span class="calc__sign">*</span>
+		<span class="calc__sign">/</span>
+	</div>
 </body>
 </html>

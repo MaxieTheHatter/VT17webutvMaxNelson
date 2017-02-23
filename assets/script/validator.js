@@ -10,6 +10,10 @@ function validateID() {
 }
 
 function idChk(id){
+	//ignore dashes and pluses
+	id = id.replace(/\D/g, "");
+	
+	//shorten 1990 to 90
 	if(id.length === 12) {
 		id = id.substring(2);
 	}
@@ -18,7 +22,23 @@ function idChk(id){
 	var digits = id.length;
 	var parity = digits % 2;
 	
-	for(var i = 0; i < digits; i++) {
+	//check if valid month
+	for(var i = 3; i <= 4; i++) {
+		var num = parseInt(id.charAt(i))
+		if(num < 1 || num > 12){
+			return false;
+		}
+	}
+	//check if valid day
+	for(var i = 5; i <= 6; i++) {
+		var num = parseInt(id.charAt(i))
+		if(num < 1 || num > 31){
+			return false;
+		}
+	}
+	
+	//run luhns
+	for(var i = 0; i < digits-1; i++) {
 		var num = parseInt(id.charAt(i))
 		if(i % 2 == parity) num *= 2;
 		if(num > 9) num -= 9;
