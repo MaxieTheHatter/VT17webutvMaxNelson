@@ -21,29 +21,48 @@ window.onload = function() {
 		
 	result.innerHTML = "0";
 	
-	for(var i = 0; i < calcNum.length; i++){
-		calcNum[i].addEventListener("click", function(i){
-			number += calcNum[i].innerText;
-			result.innerHTML = number;
-			testNumLength(number);
-			console.log("pressed " + calcNum[i].innerText);
-			console.log("number is now " + number);
-		}(i));
+	//got some help from a good friend of mine
+	function delegateFunction(element) {
+		return function(){
+		  mainFunction(element)
+		}
+	}
+  
+	function mainFunction(element){
+        number += element;
+        result.innerHTML = number;
+        testNumLength(number);
+        console.log("pressed " + element);
+        console.log("number is now " + number);
+    }
+	
+	for(var i = 0; i < calcNum.length; i++)
+	{
+       calcNum[i].addEventListener("click", delegateFunction(calcNum[i].innerText), false);
+	}
+	
+	function anotherDelegate(element){
+		return function(){
+			secondaryFunction(element)
+		}
+	}
+	
+	function secondaryFunction(element) {
+		operator = element;
+		newnumber = number;
+		number = "";
+		result.innerHTML = "0";
+		console.log("pressed " + element);
+		console.log("Operator is now " + operator);
 	}
 
 	for(var i = 0; i < calcSign.length-1; i++) {
-		calcSign[i].addEventListener("click", function(i){
-			operator = calcSign[i].innerText;
-			newnumber = number;
-			number = "";
-			result.innerHTML = "0";
-			console.log("pressed " + calcSign[i].innerHTML);
-		}(i));
+		calcSign[i].addEventListener("click", anotherDelegate(calcSign[i].innerText), false);
 	}
 	
 	calcSign[2].addEventListener("click", function(){
 		console.log("pressed " + calcSign[2].innerHTML);
-		//if(number != "" && newnumber != ""){
+		if(number != "" && newnumber != ""){
 			newnumber = parseInt(newnumber, 10);
 			number = parseInt(number, 10);
 			var node = document.createElement("LI");
@@ -66,6 +85,7 @@ window.onload = function() {
 			testNumLength(answerStr);
 			number = "";
 			newnumber = "";
-		//}
+			console.log("cleared field");
+		}
 	});
 }
