@@ -60,7 +60,7 @@ window.onload = function() {
 		calcSign[i].addEventListener("click", anotherDelegate(calcSign[i].innerText), false);
 	}
 	
-	calcSign[2].addEventListener("click", function(){
+	calcSign[4].addEventListener("click", function(){
 		console.log("pressed " + calcSign[2].innerHTML);
 		if(number != "" && newnumber != ""){
 			newnumber = parseInt(newnumber, 10);
@@ -71,9 +71,15 @@ window.onload = function() {
 			if (operator === "+"){
 				var answer = newnumber + number; 
 				text = (newnumber.toString() + " + " + number.toString())
-			} else if (operator === "-"){
+			}else if(operator === "-"){
 				var answer = newnumber - number;
 				text = (newnumber.toString() + " - " + number.toString())			
+			}else if(operator === "/") {
+				var answer = newnumber / number;
+				text = (newnumber.toString() + " / " + number.toString())	
+			}else if(operator === "*"){
+				var answer = newnumber * number;
+				text = (newnumber.toString() + " * " + number.toString())	
 			}
 			var endResult = document.createTextNode(text);
 			node.appendChild(endResult);
