@@ -58,11 +58,11 @@
 	cursor: pointer;
 }
 
-.calc__sign:hover, .calc__number:hover{
+.calc__sign:hover, .calc__number:hover, #clear:hover, #clearAll:hover{
 	background-color: lightyellow;
 }
 
-.calc__sign:active, .calc__number:active{
+.calc__sign:active, .calc__number:active, #clear:active, #clearAll:active{
 	transform: translateY(3px);
 }
 

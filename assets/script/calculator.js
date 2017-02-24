@@ -1,6 +1,5 @@
 window.onload = function() {
-	
-	//prints error if there's too many numbers on screen
+	//print error if there's too many numbers
 	var testNumLength = function(number) {
 		if(number.length > 9) {
 			result.innerHTML = (number.substr(number.length-9,9));
@@ -22,7 +21,7 @@ window.onload = function() {
 		
 	result.innerHTML = "0";
 	
-	//add clear and all clear functions
+	//add listeners to clear and all clear
 	document.getElementById("clear").addEventListener("click", function(){
 		number = "";
 		result.innerHTML = "0";
@@ -34,8 +33,8 @@ window.onload = function() {
 		newnumber = "";
 	}, false)
 	
-	//delegate number listeners
-	function delegateFunction(element) {
+	//delegate numbers
+	function delegateNumbers(element) {
 		return function(){
 		  addNums(element)
 		}
@@ -54,11 +53,11 @@ window.onload = function() {
 	//add click listener to number buttons
 	for(var i = 0; i < calcNum.length; i++)
 	{
-       calcNum[i].addEventListener("click", addNums(calcNum[i].innerText), false);
+       calcNum[i].addEventListener("click", delegateNumbers(calcNum[i].innerText), false);
 	}
 	
-	//delegate operator listeners
-	function anotherDelegate(element){
+	//delegate operators
+	function delegateSigns(element){
 		return function(){
 			addSigns(element)
 		}
@@ -79,12 +78,12 @@ window.onload = function() {
 		}
 	}
 
-	//add click listeners for operators
+	//add listener for operators
 	for(var i = 0; i < calcSign.length-1; i++) {
-		calcSign[i].addEventListener("click", addSigns(calcSign[i].innerText), false);
+		calcSign[i].addEventListener("click", delegateSigns(calcSign[i].innerText), false);
 	}
 	
-	//add listener for calculations
+	//calculate function
 	calcSign[4].addEventListener("click", function(){
 		console.log("pressed " + calcSign[4].innerHTML);
 		if(number != "" && newnumber != ""){
