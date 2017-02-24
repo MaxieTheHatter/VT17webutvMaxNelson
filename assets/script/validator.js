@@ -1,3 +1,4 @@
+//change result depending on validation data
 function validateID() {
 	var id = document.getElementById("idNumber").value;
 	if(id.length < 1) {
@@ -9,6 +10,7 @@ function validateID() {
 	}
 }
 
+//check ID number (swedish personnummer)
 function idChk(id){
 	//ignore dashes and pluses
 	id = id.replace(/\D/g, "");
@@ -47,6 +49,7 @@ function idChk(id){
 	return (sum % 10) == 0;
 }
 
+//change result for leapyear
 function validateLeapYear() {
 	var year = document.getElementById("leapYear").value;
 	if(year.length < 1) {
@@ -58,6 +61,7 @@ function validateLeapYear() {
 	}
 }
 
+//check if year is a leapyear
 function leapChk(year) {
 	if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
 		return true;
@@ -66,6 +70,7 @@ function leapChk(year) {
 	}
 }
 
+//validates number sum and updates result
 function validateNumberSum() {
 	var numSum = document.getElementById("numberSum").value;
 	var sum = numChk(numSum);
@@ -73,6 +78,7 @@ function validateNumberSum() {
 	
 }
   
+//create number sum
 function numChk(numSum) {
 	var str = numSum.toString();
 	var sum = 0;

@@ -1,4 +1,6 @@
 window.onload = function() {
+	
+	//prints error if there's too many numbers on screen
 	var testNumLength = function(number) {
 		if(number.length > 9) {
 			result.innerHTML = (number.substr(number.length-9,9));
@@ -20,6 +22,7 @@ window.onload = function() {
 		
 	result.innerHTML = "0";
 	
+	//add clear and all clear functions
 	document.getElementById("clear").addEventListener("click", function(){
 		number = "";
 		result.innerHTML = "0";
@@ -31,15 +34,15 @@ window.onload = function() {
 		newnumber = "";
 	}, false)
 	
-	//got some help from a good friend of mine
+	//delegate number listeners
 	function delegateFunction(element) {
 		return function(){
-		  mainFunction(element)
+		  addNums(element)
 		}
 	}
 	
 	//press numbers
-	function mainFunction(element){
+	function addNums(element){
         number += element;
         result.innerHTML = number;
         testNumLength(number);
@@ -48,19 +51,21 @@ window.onload = function() {
 		preventOperator = false;
     }
 	
+	//add click listener to number buttons
 	for(var i = 0; i < calcNum.length; i++)
 	{
-       calcNum[i].addEventListener("click", delegateFunction(calcNum[i].innerText), false);
+       calcNum[i].addEventListener("click", addNums(calcNum[i].innerText), false);
 	}
 	
+	//delegate operator listeners
 	function anotherDelegate(element){
 		return function(){
-			secondaryFunction(element)
+			addSigns(element)
 		}
 	}
 	
 	//press operator
-	function secondaryFunction(element) {
+	function addSigns(element) {
 		if(preventOperator != true){
 			operator = element;
 			newnumber = number;
@@ -74,10 +79,12 @@ window.onload = function() {
 		}
 	}
 
+	//add click listeners for operators
 	for(var i = 0; i < calcSign.length-1; i++) {
-		calcSign[i].addEventListener("click", anotherDelegate(calcSign[i].innerText), false);
+		calcSign[i].addEventListener("click", addSigns(calcSign[i].innerText), false);
 	}
 	
+	//add listener for calculations
 	calcSign[4].addEventListener("click", function(){
 		console.log("pressed " + calcSign[4].innerHTML);
 		if(number != "" && newnumber != ""){
