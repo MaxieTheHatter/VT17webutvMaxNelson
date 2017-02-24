@@ -8,8 +8,7 @@ window.onload = function() {
 			}
 		}
 	}
-
-
+	
 	var number = "";
 	var newnumber = "";
 	var operator = "";
@@ -20,6 +19,17 @@ window.onload = function() {
 	var preventOperator;
 		
 	result.innerHTML = "0";
+	
+	document.getElementById("clear").addEventListener("click", function(){
+		number = "";
+		result.innerHTML = "0";
+	}, false);
+	
+	document.getElementById("clearAll").addEventListener("click", function(){
+		number = "";
+		result.innerHTML = "0";
+		newnumber = "";
+	}, false)
 	
 	//got some help from a good friend of mine
 	function delegateFunction(element) {
@@ -61,7 +71,7 @@ window.onload = function() {
 	}
 	
 	calcSign[4].addEventListener("click", function(){
-		console.log("pressed " + calcSign[2].innerHTML);
+		console.log("pressed " + calcSign[4].innerHTML);
 		if(number != "" && newnumber != ""){
 			newnumber = parseInt(newnumber, 10);
 			number = parseInt(number, 10);

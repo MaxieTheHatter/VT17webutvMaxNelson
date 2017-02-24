@@ -32,7 +32,7 @@
 	cursor: auto;
 }
 
-.calc__number{
+.calc__number, #clear, #clearAll{
 	display: inline-block;
 	background-color: #cccccc;
 	width: 20px;
