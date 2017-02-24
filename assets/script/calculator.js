@@ -37,13 +37,15 @@ window.onload = function() {
 		  mainFunction(element)
 		}
 	}
-  
+	
+	//press numbers
 	function mainFunction(element){
         number += element;
         result.innerHTML = number;
         testNumLength(number);
         console.log("pressed " + element);
         console.log("number is now " + number);
+		preventOperator = false;
     }
 	
 	for(var i = 0; i < calcNum.length; i++)
@@ -57,13 +59,19 @@ window.onload = function() {
 		}
 	}
 	
+	//press operator
 	function secondaryFunction(element) {
-		operator = element;
-		newnumber = number;
-		number = "";
-		result.innerHTML = "0";
-		console.log("pressed " + element);
-		console.log("Operator is now " + operator);
+		if(preventOperator != true){
+			operator = element;
+			newnumber = number;
+			number = "";
+			result.innerHTML = "0";
+			console.log("pressed " + element);
+			console.log("Operator is now " + operator);
+			preventOperator = true;
+		}else{
+			console.log("can't press multiple times");
+		}
 	}
 
 	for(var i = 0; i < calcSign.length-1; i++) {
@@ -102,6 +110,7 @@ window.onload = function() {
 			number = "";
 			newnumber = "";
 			console.log("cleared field");
+			preventOperator = false;
 		}
 	});
 }
