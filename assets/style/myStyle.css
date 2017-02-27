@@ -86,11 +86,16 @@ aside ul{
 }
 
 .JS_NAV{
-	margin-top: 125%;
+	margin-top: 130%;
 }
 
 .JS_NAV h2{
 	position: relative;
+}
+
+#sublink {
+	font-size: 0.8em;
+	padding-left: 40px;
 }
 
 footer {

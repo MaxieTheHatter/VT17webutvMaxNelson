@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="här hittar du ett dynamiskt recpet för pannkakor">
+	<link rel="stylesheet" type="text/css" href="../style/main.css">
+	<link rel="stylesheet" type="text/css" href="../style/recepie.css">
+	<script src="../script/recepie.js" async></script>
+	<script src="../script/voting.js" defer async></script>
+	<title>Recept på pannkakor</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="../../index.html">Home</a></li>
+			<li><a href="uppgift1.html">Uppgift 1</a></li>
+			<li><a href="uppgift2.html">Uppgift 2</a></li>
+			<li><a href="uppgift3.html">Uppgift 3</a></li>
+			<li><a href="uppgift4.html">Uppgift 4</a></li>
+			<li><a href="uppgift5.html">Uppgift 5</a></li>
+			<li><a href="uppgift6.html">Uppgift 6</a></li>
+			<li><a href="slutuppgift.html">Slutuppgift</a></li>
+			<li><a href="slutuppgift_sub.html"  class="active" id="sublink">Slutuppgift - subsida</a></li>
+		</ul>
+	</nav>
+	
+	<header>
+        <h1>Recept på pannkakor.</h1>
+    
+		<figure>
+            <img src="../image/pancake_face.jpg" alt="failed to load image">
+			<figcaption>Happy pancake - pannkakor behöver inte bara vara goda, de kan även vara roliga!</figcaption>
+        </figure>
+		
+    </header>
+        <nav>
+            <a href="slutuppgift.html">Om pannkakan</a>
+            <a>Recept på pannkakor</a>
+		</nav>
+       
+	<aside>
+		<h2>Ingredienser</h2>
+		<label>
+            Antal pannkakor:
+            <input type="number" id="pancakes" value="1" min="1" max="50" step="1">
+		</label>
+               
+		<ul>
+			<li>0.3 ägg</li>
+			<li>0.6 dl mjölk</li>
+			<li>0.25 dl vetemjöl</li>
+			<li>0.05 tsk salt</li>
+			<li>0.2 msk smör</li>
+		</ul>
+    </aside>
+    
+	<article>
+		<h2> Så här gör du pannkakor:</h2>
+		<p class="votingStars"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></p>
+		<p class="rating">Rating <strong>3.7</strong> of <em>271</em> votes. </p>
+		<div id="wait"></div>
+		<ol>
+			<li>Vispa samman äggen med hälften av mjölken.</li>
+			<li>Tillsätt mjölet och vispa till en klimpfri smet. Vispa i resten av mjölken och saltet.</li>
+			<li>Smält smöret och vispa ner i smeten. Du behöver då inte använda extra fett vid gräddningen..</li>
+			<li>Hetta upp laggen. Häll i ett tunt lager smet. När ytan stelnat och blivit matt är det dags att vända pannkakan eller plättarna. Stek i ytterligare någon minut.</li>
+		</ol>
+	</article>
+</body>
+</html>

@@ -1,0 +1,27 @@
+figure {
+	margin-left: -25px;
+}
+
+figure img {
+	width: 639px; 
+	height: 422px;
+	border-radius: 25px;
+}
+
+aside {
+	margin-left: -30%;
+	margin-right: 110%;
+	padding-left: 25px;
+}
+aside ul {
+	list-style: none;
+}
+
+article {
+	margin-top: -10%;
+	width: 600px;
+}
+
+article li {
+	padding: 5px;
+}
