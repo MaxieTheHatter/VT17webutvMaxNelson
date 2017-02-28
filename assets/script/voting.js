@@ -14,7 +14,7 @@ $(document).ready(function(){
 			$(this).prevAll().text("\u2605"); //change previous stars to black
             $(this).nextAll().text("\u2606"); //change remaining stars to white
 			$(this).text("\u2605"); //set chosen star to black            
-            var rating = $(this).index() + 1;
+            var rating = $(this).index();
             putVoteInDB(rating);
 	});
 	
