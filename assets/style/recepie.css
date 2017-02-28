@@ -24,9 +24,10 @@ aside ul li{
 }
 
 #pancakeRecepie {
-	margin-top: -245px;
+	margin-top: -260px;
 	margin-left: -50px;
 	width: 600px;
+	overflow: hidden;
 }
 
 #pancakeRecepie li {

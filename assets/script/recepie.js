@@ -2,10 +2,9 @@ var baseIngr = [];
 
 function setLocalCakeCount() {
     "use strict";
-    // Code borrowed from w3C.
-    // Check browser support
+	//check if browser supports localStorage
     if (typeof (Storage) !== "undefined") {
-        // Store
+        //check if number of pancakes is stored, if not set to default
         if (window.localStorage.getItem("panCount")) {
             var localCakeCount;
             localCakeCount = document.getElementById("pancakes").value;
@@ -39,6 +38,7 @@ function updateRecipe() {
     setLocalCakeCount(); //save selected number to localStorage
 }
 
+//update ingredients upon number input
 window.oninput = function () {
     "use strict";
     updateRecipe();
@@ -46,8 +46,6 @@ window.oninput = function () {
 
 window.onload = function () {
     "use strict";
-    // Code borrowed from w3C.
-    // Check browser support
     if (typeof (Storage) !== "undefined") {
         // Store
         if (window.localStorage.getItem("panCount")) {
