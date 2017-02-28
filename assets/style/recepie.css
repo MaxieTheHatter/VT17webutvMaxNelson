@@ -1,74 +1,151 @@
-figure {
-	margin-left: -25px;
+@media (min-width: 750px) {
+	figure {
+		margin-left: -25px;
+	}
+
+	figure img {
+		width: 639px; 
+		height: 422px;
+		border-radius: 25px;
+	}
+
+	.recepieNav {
+		margin-left: -25px;
+	}
+
+	aside {
+		margin-left: -30%;
+		margin-right: 110%;
+		padding-left: 15px;
+		margin-top: 100px;
+	}
+	aside ul li{
+		list-style: none;
+		padding: 5px;
+	}
+
+	#pancakeRecepie {
+		margin-top: -260px;
+		margin-left: -50px;
+		width: 600px;
+		overflow: hidden;
+	}
+
+	#pancakeRecepie li {
+		padding: 5px;
+	}
+	#loading img {
+		width: 100px;
+		height: 100px;
+		display: block;
+		margin: auto;
+	}
+
+	#pancakeHistory {
+		margin-top: 5%;
+		padding-bottom: 10%;
+		width: 600px;
+	}
+
+	.voteIndicator {
+		font-size: 1.1em;
+		text-align: center;
+	}
+
+	.voteIndicator span {
+		font-size: 2em;
+		text-align: center;
+	}
+
+	.voteResult {
+		text-align: center;
+	}
+
+	footer {
+		border-top: 1px solid black;
+		margin-left: -500px;
+		margin-right: -25px;
+		padding: 0;
+	}
+
+	footer small {
+		padding: 0;
+		margin-left: 450px;
+	}
+
 }
 
-figure img {
-	width: 639px; 
-	height: 422px;
-	border-radius: 25px;
-}
+@media (max-width: 750px) {
+	figure {
+		margin: 0;
+	}
 
-.recepieNav {
-	margin-left: -25px;
-}
+	figure img {
+		width: 300px; 
+		height: 200px;
+		border-radius: 25px;
+	}
 
-aside {
-	margin-left: -30%;
-	margin-right: 110%;
-	padding-left: 15px;
-	margin-top: 100px;
-}
-aside ul li{
-	list-style: none;
-	padding: 5px;
-}
 
-#pancakeRecepie {
-	margin-top: -260px;
-	margin-left: -50px;
-	width: 600px;
-	overflow: hidden;
-}
+	aside {
+		margin-right: 110%;
+		margin-top: 100px;
+		width: 50px;
+	}
 
-#pancakeRecepie li {
-	padding: 5px;
-}
-#loading img {
-	width: 100px;
-	height: 100px;
-	display: block;
-	margin: auto;
-}
+	aside ul li{
+		list-style: none;
+		padding: 5px;
+		width: 50px;
+	}
 
-#pancakeHistory {
-	margin-top: 5%;
-	padding-bottom: 10%;
-	width: 600px;
-}
+	#pancakeRecepie {
+		margin-top: -370px;
+		margin-left: 150px;
+		width: 150px;
+		overflow: hidden;
+	}
 
-.voteIndicator {
-	font-size: 1.1em;
-	text-align: center;
-}
+	#pancakeRecepie li {
+		padding: 5px;
+	}
 
-.voteIndicator span {
-	font-size: 2em;
-	text-align: center;
-}
+	#loading img {
+		width: 100px;
+		height: 100px;
+		display: block;
+		margin: auto;
+	}
 
-.voteResult {
-	text-align: center;
-}
+	#pancakeHistory {
+		margin-top: 5%;
+		padding-bottom: 10%;
+		width: 300px;
+	}
 
-footer {
-	border-top: 1px solid black;
-	margin-left: -500px;
-	margin-right: -25px;
-	padding: 0;
-}
+	.voteIndicator {
+		font-size: 1.1em;
+		text-align: center;
+	}
 
-footer small {
-	padding: 0;
-	margin-left: 450px;
-}
+	.voteIndicator span {
+		font-size: 2em;
+		text-align: center;
+	}
 
+	.voteResult {
+		text-align: center;
+	}
+
+	footer {
+		border-top: 1px solid black;
+		margin-left: -500px;
+		margin-right: -25px;
+		padding: 0;
+	}
+
+	footer small {
+		padding: 0;
+		margin-left: 450px;
+	}
+}
