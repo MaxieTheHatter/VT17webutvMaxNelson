@@ -91,6 +91,7 @@
 		margin-right: 110%;
 		margin-top: 100px;
 		width: 50px;
+		font-size: 0.9em;
 	}
 
 	aside ul li{
@@ -101,9 +102,10 @@
 
 	#pancakeRecepie {
 		margin-top: -370px;
-		margin-left: 150px;
+		margin-left: 130px;
 		width: 150px;
 		overflow: hidden;
+		font-size: 0.9em;
 	}
 
 	#pancakeRecepie li {
