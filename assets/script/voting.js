@@ -8,7 +8,7 @@ function putVoteInDB (rating) {
         }, 
     });
 }
-
+//add click and hover eventhandlers
 $(document).ready(function(){	
 	$(".voteIndicator span").click(function() {
 			$(this).prevAll().text("\u2605"); //change previous stars to black
@@ -16,15 +16,18 @@ $(document).ready(function(){
 			$(this).text("\u2605"); //set chosen star to black            
             var rating = $(this).index();
             putVoteInDB(rating);
+			$(".vote").text("Du röstade " + rating + ", tack för din röst!");
 	});
 	
 	$(".voteIndicator span").hover(function(){ //sets hovered star to grey together with previous ones
+			$(this).css("cursor", "pointer"); //change cursor to pointer on mouseover
 			$(this).prevAll().css("color", "grey");
 			$(this).css("color", "grey");
-			$(this).css("cursor", "pointer"); //change cursor to pointer on mouseover
-		}, function(){ //set selected star and previous to full black
+			$(this).animate({fontSize: "2.5em"}, 200);
+		}, function(){ //change back to default value whem mouse is removed
 			$(this).prevAll().css("color", "black");
 			$(this).css("color", "black");
+			$(this).animate({fontSize: "2em"}, 200);
 	});
 		
 	//get DB info upon loading the document

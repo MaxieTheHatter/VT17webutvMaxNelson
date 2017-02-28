@@ -49,15 +49,13 @@
 
 	.voteIndicator {
 		font-size: 1.1em;
-		text-align: center;
 	}
 
 	.voteIndicator span {
 		font-size: 2em;
-		text-align: center;
 	}
 
-	.voteResult {
+	.voteResult, .vote, .voteIndicator, .voteIndicator span{
 		text-align: center;
 	}
 
