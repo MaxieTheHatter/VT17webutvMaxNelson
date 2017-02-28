@@ -8,20 +8,66 @@ figure img {
 	border-radius: 25px;
 }
 
+.recepieNav {
+	margin-left: -25px;
+}
+
 aside {
 	margin-left: -30%;
 	margin-right: 110%;
-	padding-left: 25px;
+	padding-left: 15px;
+	margin-top: 100px;
 }
-aside ul {
+aside ul li{
 	list-style: none;
+	padding: 5px;
 }
 
-article {
-	margin-top: -10%;
+#pancakeRecepie {
+	margin-top: -245px;
+	margin-left: -50px;
 	width: 600px;
 }
 
-article li {
+#pancakeRecepie li {
 	padding: 5px;
 }
+#loading img {
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: auto;
+}
+
+#pancakeHistory {
+	margin-top: 5%;
+	padding-bottom: 10%;
+	width: 600px;
+}
+
+.voteIndicator {
+	font-size: 1.1em;
+	text-align: center;
+}
+
+.voteIndicator span {
+	font-size: 2em;
+	text-align: center;
+}
+
+.voteResult {
+	text-align: center;
+}
+
+footer {
+	border-top: 1px solid black;
+	margin-left: -500px;
+	margin-right: -25px;
+	padding: 0;
+}
+
+footer small {
+	padding: 0;
+	margin-left: 450px;
+}
+

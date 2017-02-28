@@ -5,6 +5,7 @@
 	<meta name="description" content="här hittar du ett dynamiskt recpet för pannkakor">
 	<link rel="stylesheet" type="text/css" href="../style/main.css">
 	<link rel="stylesheet" type="text/css" href="../style/recepie.css">
+	<script src="../script/jquery-3.1.1.min.js" defer></script>
 	<script src="../script/recepie.js" async></script>
 	<script src="../script/voting.js" defer async></script>
 	<title>Recept på pannkakor</title>
@@ -33,10 +34,9 @@
         </figure>
 		
     </header>
-        <nav>
-            <a href="slutuppgift.html">Om pannkakan</a>
-            <a>Recept på pannkakor</a>
-		</nav>
+    <nav class="recepieNav">
+        <a href="slutuppgift.html">Om pannkakan</a>
+	</nav>
        
 	<aside>
 		<h2>Ingredienser</h2>
@@ -54,17 +54,26 @@
 		</ul>
     </aside>
     
-	<article>
+	<article id="pancakeRecepie">
 		<h2> Så här gör du pannkakor:</h2>
-		<p class="votingStars"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></p>
-		<p class="rating">Rating <strong>3.7</strong> of <em>271</em> votes. </p>
-		<div id="wait"></div>
 		<ol>
 			<li>Vispa samman äggen med hälften av mjölken.</li>
 			<li>Tillsätt mjölet och vispa till en klimpfri smet. Vispa i resten av mjölken och saltet.</li>
 			<li>Smält smöret och vispa ner i smeten. Du behöver då inte använda extra fett vid gräddningen..</li>
 			<li>Hetta upp laggen. Häll i ett tunt lager smet. När ytan stelnat och blivit matt är det dags att vända pannkakan eller plättarna. Stek i ytterligare någon minut.</li>
 		</ol>
+		<br>
+		<div id="loading"></div>
+		<p class="voteIndicator">
+		Rösta på receptet!<br>
+		<span>&star;</span><span>&star;</span><span>&star;</span><span>&star;</span><span>&star;</span>
+		</p>
+		<p class="voteResult">Rated <strong></strong> by <em></em> votes. </p>
+		
 	</article>
+
+	<footer>
+	<small>recept lånat från <a href="http://www.ica.se/recept/pannkakssmet-grundrecept-till-plattar-och-pannkakor-292828/">ICA</a></small>
+	</footer>
 </body>
 </html>
